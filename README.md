@@ -2,8 +2,6 @@
 ## Business Problem
 Online travel agency has been a popular way for customers to book flight tickets given that they often provide cheaper prices and offer choices from multitude of airlines that cater to the needs of their customers.
 
-The scope of the project is to add on to the existing features of these online travel agency platform by providing them with information on flight delays and cancellation status. 
-
 The goal of this project is to analyze domestic flight delay and cancellation data over the past 10 years to predict a future flight delay time through regression models and cancellation status through classification models.
 
 ## Raw Data
@@ -20,9 +18,15 @@ Export three datasets: one for EDA, one for regression (delay time prediction), 
 Compute a series of plots, including bar charts, time series line charts, and map plot. Generate useful insights from data. 
 
 ## Feature engineering:
+Construct "season" column based on flight date <br/>
 Encode categorical variables. <br/>
 Utilize SMOTE resampling method to resolve the issue of imbalanced response variables for airline cancellation prediction. <br/>
 Standardize data for regression predictive analysis. <br/>
 
 ## Models Construction and Evaluation:
-Apply logistic regression random forest, logistic regression, and GRNN nerual network to training dataset.Plot confusion matrix and ROC curves. For stroke dataset, random forest has the highest accuracy, and for heart disease dataset, GRNN nerual network performs the best.
+Split data into 80% train and 20% test. Apply 3-fold cross validation to the train dataset. Then, make predictions with the best models.
+
+### Airline Delay Time Prediction
+Apply random forest, multiple linear regression, and penalized multiple linear regression (lasso, ridge, and elastic net) to train models. Since multiple linear regression has the lowest RMSE, I use this model to make predictions.
+### Airline Cancellation Prediction 
+Apply random forest, logistic regression, penalized logistic regression (lasso, ridge, and elastic net) to train models. Since logistic regresison has the highest accuracy, I use this model to make predictions. 
