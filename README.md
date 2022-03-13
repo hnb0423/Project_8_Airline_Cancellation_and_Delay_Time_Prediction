@@ -15,7 +15,7 @@ Rename columns and inner join two datasets on airport code.
 Export three datasets: one for EDA, one for regression (delay time prediction), and one for classification (cancellation prediction). 
 
 ## EDA
-Compute a series of plots, including bar charts, time series line charts, and map plot. Generate useful insights from data. 
+Use geopandas to compute a series of plots, including bar charts, time series line charts, and map plot. Generate useful insights from plots. 
 
 ## Feature engineering:
 Construct "season" column based on flight date <br/>
